@@ -25,7 +25,7 @@ urlpatterns = [
     path('regkode/<int:koda>/', views.regkode_detail),
     path('admin/', admin.site.urls),
     path('openapi', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    path('liveliness', views.liveliness),
-    path('readiness', views.readiness)
+    path('liveliness/', views.liveliness),
+    path('readiness/', views.readiness)
 ]
 
