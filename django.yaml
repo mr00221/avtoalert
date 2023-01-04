@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: django
-        image: zeenpc/djangoserver:v3
+        image: mr0022/avtoalert:latest
         env:
           - name: MYSQL_URL
             valueFrom:
