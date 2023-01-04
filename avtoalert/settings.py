@@ -82,8 +82,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'avtoalert',
         'USER': os.environ['MYSQL_USERNAME'],
-        'PASSWORD': os.environ['MYSQL_URL'],
-        'HOST': os.environ['MYSQL_PASSWORD'],
+        'PASSWORD': os.environ['MYSQL_PASSWORD'],
+        'HOST': os.environ['MYSQL_URL'],
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
