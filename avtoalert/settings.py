@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -80,9 +81,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'avtoalert',
-        'USER': 'root',
-        'PASSWORD': 'globus123',
-        'HOST': '127.0.0.1',
+        'USER': os.environ['MYSQL_USERNAME'],
+        'PASSWORD': os.environ['MYSQL_URL'],
+        'HOST': os.environ['MYSQL_PASSWORD'],
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
