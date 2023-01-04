@@ -35,6 +35,18 @@ spec:
                 key: MYSQL_PASSWORD
         ports:
         - containerPort: 8000
+        livenessProbe:
+          httpGet:
+            path: /app1/liveliness
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /app1/readiness
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 10
 ---
 apiVersion: v1
 kind: Service

@@ -165,3 +165,14 @@ def regkode_detail(request, koda):
 
     if request.method == 'PATCH':
         return HttpResponse("PATCH call")
+
+
+@api_view(['GET'])
+def liveliness(request):
+    HttpResponse("OK")
+
+
+@api_view(['GET'])
+def readiness(request):
+    # TODO: Tukaj preverim ali sem povezan na podatkovno bazo
+    HttpResponse("OK")
